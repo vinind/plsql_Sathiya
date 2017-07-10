@@ -1,0 +1,1 @@
+alter table orders add(create_date date default sysdate,created_by varchar2(10),update_date date,updated_by varchar2(10));
