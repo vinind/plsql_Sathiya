@@ -1,8 +1,8 @@
 create or replace trigger customer_trig 
-before insert or update on customer
+before insert on customer
 for each row
 begin
-if :new.customer_id=null then
+if :new.customer_id is null then
 select customer_sequence.nextval 
 into :new.customer_id
 from dual;
